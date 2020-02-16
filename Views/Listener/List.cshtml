@@ -1,0 +1,35 @@
+﻿@model List<Stotify.Models.Listener>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of Listeners</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Playlists</th>
+        <th scope="col">Operation</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var listener in @Model)
+        {
+            <tr>
+                <td>@listener.ListenerFname</td>
+                <td>@listener.ListenerLname</td>
+                <td>@listener.ListenerEmail</td>
+                <td><a href="#">View Playlists</a></td>
+                <td><a href="#">Update </a>, <a href="#"> Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-light">Add Listener</button>
+
+
