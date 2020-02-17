@@ -1,0 +1,31 @@
+﻿@model List<Stotify.Models.Song>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of Songs</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Artist</th>
+        <th scope="col">Song</th>
+        <th scope="col">Song Release</th>
+        <th scope="col">Operation</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var song in @Model)
+    {
+        <tr>
+            <td>@song.ArtistName</td>
+            <td>@song.SongName</td>
+            <td>@song.SongYear</td>
+            <td><a href="#">Update </a>, <a href="#"> Delete</a></td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-light">Add Song</button>

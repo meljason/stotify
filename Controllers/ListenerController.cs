@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Stotify.Data;
 using Stotify.Models;
+using Stotify.ViewModels;
 
 namespace Stotify.Controllers
 {
@@ -17,6 +18,16 @@ namespace Stotify.Controllers
             List<Listener> listeners = db.Listeners.SqlQuery("SELECT * from Listeners").ToList();
             return View(listeners);
 
+        }
+
+        public ActionResult New()
+        {
+            var playlistList = db.Playlists.ToList();
+            var viewModel = new NewListenerViewModel()
+            {
+                Playlists = playlistList
+            };
+            return View(viewModel);
         }
     }
 }
