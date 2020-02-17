@@ -17,5 +17,18 @@ namespace Stotify.Controllers
             List<Playlist> playlists = db.Playlists.SqlQuery("SELECT * from Playlists").ToList();
             return View(playlists);
         }
+
+        public ActionResult New()
+        {
+            return View();
+        }
+
+        public ActionResult Create(Playlist playlist)
+        {
+            db.Playlists.Add(playlist);
+            db.SaveChanges();
+
+            return RedirectToAction("List", "Playlist");
+        }
     }
 }

@@ -1,0 +1,18 @@
+﻿@model Stotify.Models.Playlist
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Playlist</h2>
+
+@using (Html.BeginForm("Create", "Playlist"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.PlaylistName)
+        @Html.TextBoxFor(m => m.PlaylistName, new { @class = "form-control" })
+
+    </div>
+
+    <button type="submit" class="btn btn-light">Add Playlist</button>
+}

@@ -29,5 +29,14 @@ namespace Stotify.Controllers
             };
             return View(viewModel);
         }
+
+        [HttpPost]
+        public ActionResult Create(Listener listener)
+        {
+            db.Listeners.Add(listener);
+            db.SaveChanges();
+
+            return RedirectToAction("List", "Listener");
+        }
     }
 }

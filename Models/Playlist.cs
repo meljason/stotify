@@ -10,6 +10,7 @@ namespace Stotify.Models
     {
         [Key]
         public int PlaylistID { get; set; }
+        [Display(Name = "Playlist Name")]
         public string PlaylistName { get; set; }
 
         //representing many to many to songs
