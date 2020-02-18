@@ -18,9 +18,9 @@
     @foreach (var playlist in @Model)
     {
         <tr>
-            <td>@playlist.PlaylistName</td>
+            <td><a href="Show/@playlist.PlaylistID">@playlist.PlaylistName</a></td>
             <td><a href="#">View Songs</a></td>
-            <td><a href="#">Update </a>, <a href="#"> Delete</a></td>
+            <td><a href="Edit/@playlist.PlaylistID">Update </a>, <a href="#"> Delete</a></td>
         </tr>
     }
     </tbody>

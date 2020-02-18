@@ -20,9 +20,9 @@
     {
         <tr>
             <td>@song.ArtistName</td>
-            <td>@song.SongName</td>
+            <td><a href="Show/@song.SongID">@song.SongName</a></td>
             <td>@song.SongYear</td>
-            <td><a href="#">Update </a>, <a href="#"> Delete</a></td>
+            <td><a href="#">Update </a>, <a href="Edit/@song.SongID"> Delete</a></td>
         </tr>
     }
     </tbody>

@@ -1,5 +1,5 @@
 ﻿@using Stotify.Models
-@model Stotify.ViewModels.NewListenerViewModel
+@model Stotify.ViewModels.ListenerFormViewModel
 @{
     ViewBag.Title = "New";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -37,6 +37,7 @@
             </div>
         }
     </div>
+    @Html.HiddenFor(m=>m.listener.ListenerID)
     <button type="submit" class="btn btn-light">Add Listener</button>
 }
 

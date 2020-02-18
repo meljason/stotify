@@ -8,9 +8,10 @@ namespace Stotify.ViewModels
 {
     public class ShowListenerViewModel
     {
-        public IEnumerable<Playlist> Playlists { get; set; }
+        public virtual Listener listener { get; set; }
 
-        public Listener Listener { get; set; }
+        public List<Playlist> playlists { get; set; }
+
 
     }
 }

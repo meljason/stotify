@@ -20,11 +20,11 @@
         @foreach (var listener in @Model)
         {
             <tr>
-                <td>@listener.ListenerFname</td>
+                <td><a href="/Listener/Show/@listener.ListenerID">@listener.ListenerFname</a></td>
                 <td>@listener.ListenerLname</td>
                 <td>@listener.ListenerEmail</td>
                 <td><a href="#">View Playlists</a></td>
-                <td><a href="#">Update </a>, <a href="#"> Delete</a></td>
+                <td><a href="/Listener/Edit/@listener.ListenerID">Update </a>, <a href="#"> Delete</a></td>
             </tr>
         }
     </tbody>

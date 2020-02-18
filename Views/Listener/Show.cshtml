@@ -4,10 +4,44 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Listener Details</h2>
+<h2>Show</h2>
 
-<div>First Name : @Model.listener.ListenerFname</div>
-<div>Last Name : @Model.listener.ListenerLname</div>
-<div>Email: @Model.listener.ListenerEmail</div>
-<div>Playlist you like: </div>
+<div>
+    <h4>Listener</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.listener.ListenerFname)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.listener.ListenerFname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.listener.ListenerLname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.listener.ListenerLname)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.listener.ListenerGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.listener.ListenerEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.listener.ListenerEmail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.listener.ListenerID }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.listener.ListenerID }) |
+    @Html.ActionLink("Back to List", "List")
+</p>

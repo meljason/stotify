@@ -160,7 +160,7 @@
     <Compile Include="Models\Playlist.cs" />
     <Compile Include="Models\Song.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\NewListenerViewModel.cs" />
+    <Compile Include="ViewModels\ListenerFormViewModel.cs" />
     <Compile Include="ViewModels\NewSongViewModel.cs" />
     <Compile Include="ViewModels\ShowListenerViewModel.cs" />
   </ItemGroup>
@@ -206,7 +206,15 @@
     <Content Include="Views\Listener\New.cshtml" />
     <Content Include="Views\Playlist\New.cshtml" />
     <Content Include="Views\Song\New.cshtml" />
+    <Content Include="Views\Playlist\Show.cshtml" />
+    <Content Include="Views\Song\Show.cshtml" />
     <Content Include="Views\Listener\Show.cshtml" />
+    <Content Include="Views\Listener\Edit.cshtml" />
+    <Content Include="Views\Playlist\Edit.cshtml" />
+    <Content Include="Views\Song\Edit.cshtml" />
+    <Content Include="Views\Listener\Delete.cshtml" />
+    <Content Include="Views\Playlist\Delete.cshtml" />
+    <Content Include="Views\Song\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

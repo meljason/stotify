@@ -9,7 +9,7 @@ namespace Stotify.Data
 {
     public class StotifyContext : DbContext
     {
-        public StotifyContext()
+        public StotifyContext() : base("name=StotifyContext")
         {
 
         }

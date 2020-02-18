@@ -22,6 +22,6 @@ namespace Stotify.Models
         public string ListenerEmail { get; set; }
 
         //representing many to many to playlist
-        public Playlist Playlist { get; set; }
+        public ICollection<Playlist> Playlists { get; set; }
     }
 }
