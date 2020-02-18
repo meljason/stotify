@@ -20,8 +20,7 @@
 
     <div class="form-group">
         @Html.LabelFor(m => m.SongYear)
-        @*@Html.DropDownList("Release Year", Enumerable.Range(1950, (DateTime.Now.Year - 1950) + 1).Reverse().Select(m => new SelectListItem { Value = m.ToString(), Text = m.ToString()}), "Song Release")*@
-        @Html.DropDownListFor(m=>m.SongYear, (IEnumerable<SelectListItem>)Enumerable.Range(1950, (DateTime.Now.Year - 1950) + 1).Reverse(), "Release Year")
+        @Html.DropDownList("Release Year", Enumerable.Range(1950, (DateTime.Now.Year - 1950) + 1).Reverse().Select(m => new SelectListItem { Value = m.ToString(), Text = m.ToString()}), "Song Release")
     </div>
 
     <div class="form-group">

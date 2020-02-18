@@ -10,8 +10,11 @@ namespace Stotify.Models
     {
         [Key]
         public int SongID { get; set; }
+        [Display(Name = "Song Name")]
         public string SongName { get; set; }
+        [Display(Name = "Artist Name")]
         public string ArtistName { get; set; }
+        [Display(Name = "Song Release Year")]
         public int SongYear { get; set; }
         public int HasPic { get; set; }
         public string PicExtension { get; set; }
