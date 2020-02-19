@@ -21,6 +21,12 @@
         @Html.LabelFor(m => m.listener.ListenerEmail)
         @Html.TextBoxFor(m => m.listener.ListenerEmail, new { @class = "form-control" })
     </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m=>m.listener.ListenerGender)
+        @Html.RadioButton("Gender", "Male") Male
+        @Html.RadioButton("Gender", "Female") Female
+    </div>
     //Dropdown attempt
     @*<div class="form-group">
             @Html.LabelFor(m => m.listener.Playlists)

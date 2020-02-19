@@ -15,10 +15,28 @@ namespace Stotify.Controllers
     {
         private StotifyContext db = new StotifyContext();
         // GET: Playlist/List
-        public ActionResult List()
+        public ActionResult List(string search)
         {
-            List<Playlist> playlists = db.Playlists.SqlQuery("SELECT * from Playlists").ToList();
-            return View(playlists);
+            //List<Playlist> playlists = db.Playlists.SqlQuery("SELECT * from Playlists").ToList();
+            //return View(playlists);
+            return View(db.Playlists.Where(p => p.PlaylistName.Contains(search) 
+                                                || search == null).ToList());
+        }
+
+        //add song to playlist of playlist id = ?
+        public ActionResult PlaylistSong(int id)
+        {
+            string query =
+                "select * Songs inner join SongPlaylists on " +
+                "Songs.SongID = SongPlaylists.Song_SongID " +
+                "where SongPlaylists.Playlist_PlaylistID = @id";
+            SqlParameter param = new SqlParameter("@id", id);
+            List<Song> playlistSongs = db.Songs.SqlQuery(query, param).ToList();
+
+            ShowPlaylistViewModel viewModel = new ShowPlaylistViewModel();
+            viewModel.songs = playlistSongs;
+
+            return View(viewModel);
         }
 
         public ActionResult New()

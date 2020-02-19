@@ -86,3 +86,4 @@ C:\Users\jason\source\repos\Stotify\obj\Debug\Stotify.Migrations.PopulateListene
 C:\Users\jason\source\repos\Stotify\obj\Debug\Stotify.Migrations.PopulatePlaylist.resources
 C:\Users\jason\source\repos\Stotify\obj\Debug\Stotify.Migrations.PopulateSongs.resources
 C:\Users\jason\source\repos\Stotify\obj\Debug\Stotify.Migrations.ApplyTypoCorrectionToTableSong.resources
+C:\Users\Jason\source\repos\stotify\obj\Debug\Stotify.Migrations.UpdateListenerDatabase.resources

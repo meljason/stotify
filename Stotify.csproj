@@ -155,6 +155,10 @@
     <Compile Include="Migrations\202002160357456_ApplyTypoCorrectionToTableSong.designer.cs">
       <DependentUpon>202002160357456_ApplyTypoCorrectionToTableSong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002182108095_UpdateListenerDatabase.cs" />
+    <Compile Include="Migrations\202002182108095_UpdateListenerDatabase.designer.cs">
+      <DependentUpon>202002182108095_UpdateListenerDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Listener.cs" />
     <Compile Include="Models\Playlist.cs" />
@@ -163,6 +167,7 @@
     <Compile Include="ViewModels\ListenerFormViewModel.cs" />
     <Compile Include="ViewModels\NewSongViewModel.cs" />
     <Compile Include="ViewModels\ShowListenerViewModel.cs" />
+    <Compile Include="ViewModels\ShowPlaylistViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -209,12 +214,14 @@
     <Content Include="Views\Playlist\Show.cshtml" />
     <Content Include="Views\Song\Show.cshtml" />
     <Content Include="Views\Listener\Show.cshtml" />
-    <Content Include="Views\Listener\Edit.cshtml" />
     <Content Include="Views\Playlist\Edit.cshtml" />
     <Content Include="Views\Song\Edit.cshtml" />
     <Content Include="Views\Listener\Delete.cshtml" />
     <Content Include="Views\Playlist\Delete.cshtml" />
     <Content Include="Views\Song\Delete.cshtml" />
+    <Content Include="Views\Listener\Edit.cshtml" />
+    <Content Include="Views\Listener\ListenerPlaylist.cshtml" />
+    <Content Include="Views\Playlist\PlaylistSong.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -247,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002160357456_ApplyTypoCorrectionToTableSong.resx">
       <DependentUpon>202002160357456_ApplyTypoCorrectionToTableSong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002182108095_UpdateListenerDatabase.resx">
+      <DependentUpon>202002182108095_UpdateListenerDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

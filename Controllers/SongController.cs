@@ -14,10 +14,14 @@ namespace Stotify.Controllers
     {
         private StotifyContext db = new StotifyContext();
         // GET: Song/List
-        public ActionResult List()
+        public ActionResult List(string search)
         {
-            List<Song> songs = db.Songs.SqlQuery("SELECT * FROM Songs").ToList();
-            return View(songs);
+            //List<Song> songs = db.Songs.SqlQuery("SELECT * FROM Songs").ToList();
+            //return View(songs);
+            return View(db.Songs.Where(s => s.SongName.Contains(search)
+                                            || s.ArtistName.Contains(search)
+                                            || s.SongYear.ToString().Contains(search)
+                                            || search == null).ToList());
         }
 
         // GET: Song/New

@@ -1,0 +1,47 @@
+﻿@model Stotify.ViewModels.ShowListenerViewModel
+
+@{
+    ViewBag.Title = "ListenerPlaylist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListenerPlaylist</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.listener.Playlists)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.playlists) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaylistName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.PlaylistID }) |
+                @Html.ActionLink("Details", "Show", new { id=item.PlaylistID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.PlaylistID })
+            </td>
+        </tr>
+    }
+</table>
+
+@*<form method="post" action="/Listener/AttachPlaylist/@Model.listener.ListenerID">
+    <select name="PlaylistID" id="PlaylistID">
+        @foreach (var playlist in Model.playlists)
+        {
+            <option value="@playlist.PlaylistID">
+                @playlist.PlaylistName
+            </option>
+        }
+
+    </select>
+    <input type="submit" value="Add Playlist"/>
+</form>*@
+

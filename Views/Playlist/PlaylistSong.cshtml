@@ -1,0 +1,41 @@
+﻿@model Stotify.ViewModels.ShowPlaylistViewModel
+
+@{
+    ViewBag.Title = "PlaylistSong";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PlaylistSong</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.playlist.Songs)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.songs) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SongName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArtistName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SongYear)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SongID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SongID })
+        </td>
+    </tr>
+}
+
+</table>

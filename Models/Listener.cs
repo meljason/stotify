@@ -16,7 +16,8 @@ namespace Stotify.Models
 
         [Display(Name = "Last Name")]
         public string ListenerLname { get; set; }
-        public char ListenerGender { get; set; }
+        [Display(Name = "Gender")]
+        public string ListenerGender { get; set; }
 
         [Display(Name = "Email")]
         public string ListenerEmail { get; set; }
