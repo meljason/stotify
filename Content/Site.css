@@ -1,6 +1,6 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    margin: 0px !important;
+    padding: 0px !important;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +21,13 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.submit-btn {
+    background-color: #1ED760;
+    border-radius: 500px;
+}
+
+.search-field {
+    border-radius: 500px;
 }

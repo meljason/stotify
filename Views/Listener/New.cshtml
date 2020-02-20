@@ -23,9 +23,10 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m=>m.listener.ListenerGender)
-        @Html.RadioButton("Gender", "Male") Male
-        @Html.RadioButton("Gender", "Female") Female
+        @Html.LabelFor(m => m.listener.ListenerGender)
+        @Html.RadioButtonFor(m => m.listener.ListenerGender, "Male") Male
+        @Html.RadioButtonFor(m => m.listener.ListenerGender, "Female") Female
+
     </div>
     //Dropdown attempt
     @*<div class="form-group">
@@ -38,7 +39,7 @@
         @foreach (Playlist playlist in Model.Playlists)
         {
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" name="playlists" value="@playlist.PlaylistName" id="playlists" />
+                <input type="checkbox" class="form-check-input" name="playlists" value="@playlist.PlaylistName" id="playlists"/>
                 <label class="form-check-label" for="@playlist.PlaylistName">@playlist.PlaylistName</label>
             </div>
         }

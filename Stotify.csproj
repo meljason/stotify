@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ListenerController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PlaylistController.cs" />
     <Compile Include="Controllers\SongController.cs" />
     <Compile Include="Data\StotifyContext.cs" />
@@ -222,6 +223,7 @@
     <Content Include="Views\Listener\Edit.cshtml" />
     <Content Include="Views\Listener\ListenerPlaylist.cshtml" />
     <Content Include="Views\Playlist\PlaylistSong.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

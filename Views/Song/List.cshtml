@@ -8,11 +8,10 @@
 
 @using (Html.BeginForm("List", "Song", FormMethod.Get))
 {
-    @Html.TextBox("search")
-    <input type="submit" value="Search" />
+    @Html.TextBox("search", null, new { @class = "form-control mr-sm-2 d-inline search-field", @placeholder = "Press enter to Search!" })
 }
 
-<table class="table">
+<table class="table mt-3">
     <thead>
         <tr>
             <th scope="col">Artist</th>
@@ -34,7 +33,7 @@
             {
                 <tr>
                     <td>@song.ArtistName</td>
-                    <td><a href="Show/@song.SongID">@song.SongName</a></td>
+                    <td><a href="Show/@song.SongID" style="text-decoration: none; color: white; font-weight: bold;">@song.SongName</a></td>
                     <td>@song.SongYear</td>
                     <td><a href="Edit/@song.SongID">Update </a>, <a href="Delete/@song.SongID"> Delete</a></td>
                 </tr>
@@ -44,4 +43,4 @@
     </tbody>
 </table>
 
-<button type="button" class="btn btn-light">@Html.ActionLink("Add Song", "New")</button>
+<button type="button" class="btn submit-btn">@Html.ActionLink("Add Song", "New", null, new { style = "text-decoration:none; color:white; font-weight:bold;" })</button>

@@ -20,7 +20,7 @@
 
     <div class="form-group">
         @Html.LabelFor(m => m.SongYear)
-        @Html.DropDownList("Release Year", Enumerable.Range(1950, (DateTime.Now.Year - 1950) + 1).Reverse().Select(m => new SelectListItem { Value = m.ToString(), Text = m.ToString()}), "Song Release")
+        @Html.DropDownList("Release Year", Enumerable.Range(1950, (DateTime.Now.Year - 1950) + 1).Reverse().Select(m => new SelectListItem { Value = m.ToString(), Text = m.ToString() }), "Song Release")
     </div>
 
     <div class="form-group">
@@ -28,5 +28,10 @@
         @Html.TextBox("file", "", new { type = "file" })
     </div>
 
-    <button type="submit" class="btn btn-light">Add Song</button>
+    <div class="form-group">
+        <label for="coverImage">Import Cover Image</label>
+        <input type="file" class="form-control-file" id="coverImage" aria-describedby="fileHelp">
+    </div>
+
+    <button type="submit" style="text-decoration:none; color:white; font-weight:bold;" class="btn submit-btn">Add Song</button>
 }

@@ -71,6 +71,7 @@ namespace Stotify.Controllers
                 listenerInDb.ListenerFname = listener.ListenerFname;
                 listenerInDb.ListenerLname = listener.ListenerLname;
                 listenerInDb.ListenerEmail = listener.ListenerEmail;
+                listenerInDb.ListenerGender = listener.ListenerGender;
                 listenerInDb.Playlists = listener.Playlists;
             }
             

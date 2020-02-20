@@ -29,9 +29,11 @@ namespace Stotify.Controllers
             string query =
                 "select * Songs inner join SongPlaylists on " +
                 "Songs.SongID = SongPlaylists.Song_SongID " +
-                "where SongPlaylists.Playlist_PlaylistID = @id";
+                "where Playlist_PlaylistID = @id";
+            
             SqlParameter param = new SqlParameter("@id", id);
             List<Song> playlistSongs = db.Songs.SqlQuery(query, param).ToList();
+            
 
             ShowPlaylistViewModel viewModel = new ShowPlaylistViewModel();
             viewModel.songs = playlistSongs;
