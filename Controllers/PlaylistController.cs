@@ -27,7 +27,7 @@ namespace Stotify.Controllers
         public ActionResult PlaylistSong(int id)
         {
             string query =
-                "select * Songs inner join SongPlaylists on " +
+                "select * from Songs inner join SongPlaylists on " +
                 "Songs.SongID = SongPlaylists.Song_SongID " +
                 "where Playlist_PlaylistID = @id";
             
